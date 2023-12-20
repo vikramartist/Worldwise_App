@@ -1,0 +1,40 @@
+.appnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appnav span {
+  color: white;
+  justify-self: flex-start;
+}
+
+.appnav ul {
+  list-style: none;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightslategray;
+}
+
+.appnav > ul > li:first-child {
+  border-right: 1px solid white;
+}
+
+.appnav a {
+  padding: 0.3rem 0.7rem;
+  width: 60%;
+}
+
+.appnav a:link,
+.appnav a:visited {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.773);
+}
+
+.appnav a:global(.active) {
+  background-color: darkslategray;
+  color: white;
+}

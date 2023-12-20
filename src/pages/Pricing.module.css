@@ -1,0 +1,60 @@
+.pricing {
+  width: 100%;
+  height: 100vh;
+  background-color: lightslategrey;
+}
+
+.pricing section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pricing section article {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.pricing section article h1 {
+  font-size: 2rem;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pricing section article span {
+  font-size: 0.9rem;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+.pricing section article a {
+  text-decoration: none;
+  text-align: center;
+  background-color: lightblue;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.pricing section aside {
+  width: 50%;
+  height: 90%;
+  padding: 1rem;
+}
+
+.pricing section aside img {
+  width: 100%;
+  height: 70%;
+}

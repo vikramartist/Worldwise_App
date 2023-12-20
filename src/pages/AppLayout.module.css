@@ -1,0 +1,19 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overscroll-behavior-y: none;
+}
+
+.app > span {
+  color: black;
+  border-radius: 0.4rem;
+  background-color: inherit;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.app > span::before {
+  width: 2rem;
+}

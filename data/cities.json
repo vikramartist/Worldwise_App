@@ -1,0 +1,100 @@
+{
+  "cities": [
+    {
+      "id": "f6d9c3a5-4c6d-4b7d-9e6d-1d8f7f0c2b7c",
+      "country": "India",
+      "cityName": "Mumbai",
+      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/25px-Flag_of_India.svg.png",
+      "date": "2024-06-05T14:30:00.000Z",
+      "notes": "The best way to predict the future is to create it. - Peter Drucker",
+      "position": {
+        "lat": "19.076",
+        "lng": "72.8777"
+      }
+    },
+    {
+      "id": "f6d9c3a5-4c6d-4b7d-9e6d-1d8f7f0c2b80",
+      "country": "Canada",
+      "cityName": "Toronto",
+      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/25px-Flag_of_Canada_%28Pantone%29.svg.png",
+      "date": "2024-10-31T08:30:00.000Z",
+      "notes": "The only source of knowledge is experience. - Albert Einstein",
+      "position": {
+        "lat": "56.1304",
+        "lng": "-106.3468"
+      }
+    },
+    {
+      "id": "d9a7b5c3-6f4e-4d8d-9d2d-1a0b4d5e8c5d",
+      "country": "United States",
+      "cityName": "New York",
+      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/25px-Flag_of_the_United_States.svg.png",
+      "date": "2024-06-01T12:00:00Z",
+      "notes": "The best way to predict the future is to create it.",
+      "position": {
+        "lat": "40.712776",
+        "lng": "-74.005974"
+      }
+    },
+    {
+      "id": "a1b2c3d4-e5f6-4a3b-8c9d-7e8f9g0h1i2j",
+      "country": "China",
+      "cityName": "Shanghai",
+      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/25px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+      "date": "2024-06-03T12:00:00Z",
+      "notes": "The only limit to our realization of tomorrow will be our doubts of today.",
+      "position": {
+        "lat": "31.230391",
+        "lng": "121.473701"
+      }
+    },
+    {
+      "id": "b1c2d3e4-f5g6-4b3c-8d9e-7f8g9h0i1j2k",
+      "country": "Japan",
+      "cityName": "Tokyo",
+      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/25px-Flag_of_Japan.svg.png",
+      "date": "2024-06-04T12:00:00Z",
+      "notes": "The best way out is always through.",
+      "position": {
+        "lat": "35.689487",
+        "lng": "139.691711"
+      }
+    },
+    {
+      "id": "c1d2e3f4-g5h6-4c3d-9e8f-0g1h2i3j4k5l",
+      "country": "Russia",
+      "cityName": "Moscow",
+      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/25px-Flag_of_Russia.svg.png",
+      "date": "2024-06-05T12:00:00Z",
+      "notes": "Believe you can and you're halfway there.",
+      "position": {
+        "lat": "55.755825",
+        "lng": "37.617298"
+      }
+    },
+    {
+      "id": "d1e2f3g4-h5i6-4d3e-8f9g-0h1i2j3k4l5m",
+      "country": "Brazil",
+      "cityName": "Rio de Janeiro",
+      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/25px-Flag_of_Brazil.svg.png",
+      "date": "2024-06-06T12:00:00Z",
+      "notes": "The only source of knowledge is experience.",
+      "position": {
+        "lat": "-22.906847",
+        "lng": "-43.172897"
+      }
+    },
+    {
+      "id": "e1f2g3h4-i5j6-4e3f-9g0h-1i2j3k4l5m6n",
+      "country": "Australia",
+      "cityName": "Sydney",
+      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/25px-Flag_of_Australia.svg.png",
+      "date": "2024-06-07T12:00:00Z",
+      "notes": "The future belongs to those who believe in the beauty of their dreams.",
+      "position": {
+        "lat": "-33.868820",
+        "lng": "151.209296"
+      }
+    }
+  ]
+}

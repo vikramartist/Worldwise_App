@@ -1,0 +1,69 @@
+.product {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+.product section {
+  width: 100%;
+  height: 90%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product section aside {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product section article {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+.product section article h1 {
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.product section article span {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: start;
+  color: lightsalmon;
+  text-overflow: ellipsis;
+}
+.product section aside img {
+  width: 90%;
+  height: 60%;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 1px 5px black;
+}
+
+.product section a {
+  background-color: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 10rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 1px 1px 3px black;
+}
+
+.product section a:hover {
+  background-color: rgba(172, 255, 47, 0.644);
+}
