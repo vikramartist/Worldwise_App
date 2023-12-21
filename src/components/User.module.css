@@ -1,0 +1,23 @@
+.userBox {
+  position: absolute;
+  z-index: 1000;
+  width: 11rem;
+  height: 2.5rem;
+  background-color: lightgray;
+  top: 2rem;
+  left: 70vw;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 2px 3px black;
+}
+
+.userBox > svg:first-child {
+  height: 85%;
+  width: 1.5rem;
+}
+
+.userBox > span {
+  font-size: 0.7rem;
+}

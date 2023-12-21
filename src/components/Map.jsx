@@ -12,11 +12,21 @@ import {
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faLocation } from "@fortawesome/free-solid-svg-icons";
+import useGeolocation from "../hooks/useGeolocation";
+import Button from "./Button";
+import User from "./User";
 
 const Map = () => {
-  const [currentPosition, setCurrentPosition] = useState([40, 0]);
+  const [currentPosition, setCurrentPosition] = useState([
+    12.972442, 77.580643,
+  ]);
   const { open, handleOpen, cities } = useCities();
+  const {
+    isLoading: isLoadingPosition,
+    position: geolocationPosition,
+    getPosition,
+  } = useGeolocation();
 
   const [searchParams, setSearchParams] = useSearchParams();
   const mapLat = searchParams.get("lat");
@@ -29,6 +39,14 @@ const Map = () => {
     [mapLat, mapLng]
   );
 
+  useEffect(
+    function () {
+      if (geolocationPosition.lat && geolocationPosition.lng)
+        setCurrentPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition]
+  );
+
   return (
     <div className={styles.mapContainer}>
       {!open && (
@@ -36,6 +54,15 @@ const Map = () => {
           <FontAwesomeIcon icon={faChevronRight} />
         </span>
       )}
+      {!geolocationPosition && (
+        <Button
+          type={open ? "position-open" : "position-close"}
+          onClick={getPosition}
+        >
+          {isLoadingPosition ? "Loading.." : "Use Your Position 📍"}
+        </Button>
+      )}
+      <User />
       <MapContainer
         center={currentPosition}
         zoom={6}
@@ -79,7 +106,7 @@ const Map = () => {
 // eslint-disable-next-line react/prop-types
 function ChangeCenter({ position }) {
   const map = useMap();
-  map.setView(position);
+  map.setView(position, 10);
   return null;
 }
 

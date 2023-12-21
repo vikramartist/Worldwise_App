@@ -24,3 +24,46 @@
   width: 5rem;
   border: 0.5px solid white;
 }
+
+.position-close {
+  position: absolute;
+  z-index: 1000;
+  text-transform: uppercase;
+  bottom: 0;
+  justify-self: flex-end;
+  font-size: 0.8rem;
+  width: 10rem;
+  background-color: green;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  bottom: 3rem;
+  left: 45vw;
+  border-style: none;
+  border-color: none;
+  box-shadow: 1px 2px 3px green;
+}
+
+.position-open {
+  position: absolute;
+  z-index: 1000;
+  text-transform: uppercase;
+  bottom: 0;
+  justify-self: flex-end;
+  font-size: 0.8rem;
+  width: 10rem;
+  background-color: green;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  bottom: 3rem;
+  left: 64vw;
+  border-style: none;
+  border-color: none;
+  box-shadow: 1px 2px 3px black;
+  transition: background-color 2s, translateY 3s;
+}
+
+.position-open:hover,
+.position-close:hover {
+  background-color: darkgreen;
+  transform: translateY(-4px);
+}
