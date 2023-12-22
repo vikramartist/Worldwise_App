@@ -19,13 +19,16 @@
 }
 
 .footer {
-  margin-top: auto;
+  height: 2rem;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
 }
 
 .copyright {
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: lightgray;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   opacity: 70%;
 }
 

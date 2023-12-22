@@ -8,7 +8,7 @@ import Spinner from "./Spinner";
 const City = () => {
   const { id } = useParams();
   const { getCity, currentCity, isLoading } = useCities();
-  const { country, cityName, emoji, date, notes } = currentCity;
+  const { cityName, emoji, date, notes } = currentCity;
   const formattedDate = useFormatDate(date, 2);
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const City = () => {
       <div className={styles.row}>
         <h6>City name</h6>
         <section>
-          <img src={emoji} alt={country} />
+          <i className={`em em-flag-${emoji}`}></i>
           <p className={styles.text}>{cityName}</p>
         </section>
       </div>

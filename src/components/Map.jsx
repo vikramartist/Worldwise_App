@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import {
   MapContainer,
@@ -16,6 +16,7 @@ import { faChevronRight, faLocation } from "@fortawesome/free-solid-svg-icons";
 import useGeolocation from "../hooks/useGeolocation";
 import Button from "./Button";
 import User from "./User";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 
 const Map = () => {
   const [currentPosition, setCurrentPosition] = useState([
@@ -27,10 +28,8 @@ const Map = () => {
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
-
-  const [searchParams, setSearchParams] = useSearchParams();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const [mapLat, mapLng] = useUrlPosition();
+  const [click, setClick] = useState(true);
 
   useEffect(
     function () {
@@ -54,10 +53,13 @@ const Map = () => {
           <FontAwesomeIcon icon={faChevronRight} />
         </span>
       )}
-      {!geolocationPosition && (
+      {geolocationPosition && click && (
         <Button
           type={open ? "position-open" : "position-close"}
-          onClick={getPosition}
+          onClick={() => {
+            setClick(false);
+            getPosition();
+          }}
         >
           {isLoadingPosition ? "Loading.." : "Use Your Position 📍"}
         </Button>
@@ -65,7 +67,7 @@ const Map = () => {
       <User />
       <MapContainer
         center={currentPosition}
-        zoom={6}
+        zoom={9}
         scrollWheelZoom={true}
         className={styles.map}
       >
@@ -80,7 +82,7 @@ const Map = () => {
           >
             <Popup>
               <section>
-                <img src={city.emoji} alt={city.cityName} />
+                <i className={`em em-flag-${city.emoji}`}></i>
                 <span>{city.cityName}</span>
               </section>
 
@@ -106,7 +108,7 @@ const Map = () => {
 // eslint-disable-next-line react/prop-types
 function ChangeCenter({ position }) {
   const map = useMap();
-  map.setView(position, 10);
+  map.setView(position, 8);
   return null;
 }
 

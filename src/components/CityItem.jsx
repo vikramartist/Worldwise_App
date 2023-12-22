@@ -5,7 +5,7 @@ import { useCities, useFormatDate } from "../contexts/CitiesContext";
 
 const CityItem = ({ city }) => {
   const { currentCity } = useCities();
-  const { cityName, emoji, date, country, id, position } = city;
+  const { cityName, emoji, date, id, position } = city;
   const formatedDate = useFormatDate(date, 1);
 
   return (
@@ -16,7 +16,7 @@ const CityItem = ({ city }) => {
         }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
-        <img src={emoji} alt={country} className={styles.emoji} />
+        <i className={`em em-flag-${emoji}`}></i>
         <h1 className={styles.title}>{cityName}</h1>
         <time className={styles.date}>({formatedDate})</time>
         <button className={styles.deleteBtn}>&times;</button>
