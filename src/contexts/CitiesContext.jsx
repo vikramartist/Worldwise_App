@@ -40,6 +40,26 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // eslint-disable-next-line no-unused-vars
+  async function createCity(newData) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      setCities((city) => [...city, data]);
+    } catch {
+      alert("There was an error in loading data...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <CitiesContext.Provider
       value={{
@@ -49,6 +69,7 @@ function CitiesProvider({ children }) {
         handleOpen: setIsOpen,
         currentCity,
         getCity,
+        createCity,
       }}
     >
       {children}
