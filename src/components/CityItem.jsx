@@ -4,9 +4,14 @@ import styles from "./CityItem.module.css";
 import { useCities, useFormatDate } from "../contexts/CitiesContext";
 
 const CityItem = ({ city }) => {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
   const formatedDate = useFormatDate(date, 1);
+
+  function handleClick(e) {
+    e.preventDefault();
+    deleteCity(id);
+  }
 
   return (
     <li>
@@ -19,7 +24,9 @@ const CityItem = ({ city }) => {
         <i className={`em em-flag-${emoji}`}></i>
         <h1 className={styles.title}>{cityName}</h1>
         <time className={styles.date}>({formatedDate})</time>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button onClick={(e) => handleClick(e)} className={styles.deleteBtn}>
+          &times;
+        </button>
       </Link>
     </li>
   );

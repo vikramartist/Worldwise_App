@@ -5,19 +5,36 @@
   height: 2.5rem;
   background-color: lightgray;
   top: 2rem;
-  left: 70vw;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-shadow: 1px 2px 3px black;
+  align-self: center;
+}
+.userBox_open {
+  left: 65vw;
 }
 
-.userBox > svg:first-child {
-  height: 85%;
-  width: 1.5rem;
+.userBox_close {
+  left: 40vw;
 }
 
-.userBox > span {
-  font-size: 0.7rem;
+.userBox > h6 {
+  font-size: 0.8rem;
+}
+
+.button {
+  width: 10%;
+  cursor: pointer;
+}
+
+.button > svg {
+  width: 90%;
+  padding: 0.1rem;
+}
+
+.button:hover {
+  background-color: black;
+  color: whitesmoke;
 }
