@@ -1,15 +1,31 @@
-import { useState } from "react";
 import Navbar from "../components/Navbar";
 import styles from "./Login.module.css";
-import { NavLink } from "react-router-dom";
+import { useAuth } from "../contexts/FakeAuthContext";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("vikram@gmail.com");
+  const [password, setPassword] = useState("vikru789@");
 
-  const handleLogin = (e) => {
+  // eslint-disable-next-line no-unused-vars
+  const { login, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  function handleLogin(e) {
     e.preventDefault();
-  };
+    if (email && password) login(email, password);
+  }
+
+  useEffect(
+    function () {
+      if (isAuthenticated) {
+        navigate("/app/cities", { replace: true });
+      }
+    },
+    [isAuthenticated, navigate]
+  );
+
   return (
     <div className={styles.login}>
       <Navbar />
@@ -39,10 +55,6 @@ const Login = () => {
           </div>
           <button className={styles.user}>Login</button>
         </form>
-        <span>
-          Don&apos;t have an account?{" "}
-          <NavLink to={"/register"}>Join Us</NavLink>
-        </span>
       </section>
     </div>
   );
