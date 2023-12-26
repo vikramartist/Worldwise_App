@@ -20,7 +20,7 @@ export default function Pricing() {
           <Link to={"/login"}>Join the Community</Link>
         </article>
         <aside>
-          <img src="src\pricing.jpg" alt="pricing.logo" />
+          <img src="./pricing.jpg" alt="pricing.logo" />
         </aside>
       </section>
     </div>

@@ -8,7 +8,7 @@ export default function Product() {
       <Navbar />
       <section>
         <aside>
-          <img src="src\product-bg.jpg" alt="forest-logo" />
+          <img src="./product-bg.jpg" alt="forest-logo" />
         </aside>
         <article>
           <h1>About Worldwise</h1>
