@@ -13,7 +13,7 @@
 
 .homepage section {
   width: 90%;
-  height: 85%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,7 @@
   color: whitesmoke;
   gap: 2.5rem;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .homepage h1 {

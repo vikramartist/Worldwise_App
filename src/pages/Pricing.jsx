@@ -17,7 +17,7 @@ export default function Pricing() {
             <br />
             Try out a 30 day free trial.
           </span>
-          <Link to={"/register"}>Join the Community</Link>
+          <Link to={"/login"}>Join the Community</Link>
         </article>
         <aside>
           <img src="src\pricing.jpg" alt="pricing.logo" />

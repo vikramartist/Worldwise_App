@@ -26,7 +26,7 @@ export default function Product() {
             Worldwise can help you find the perfect destination. Give it a try
             and start exploring the world today!
           </span>
-          <Link to={"/app"}>Explore</Link>
+          <Link to={"/login"}>Explore</Link>
         </article>
       </section>
     </div>
